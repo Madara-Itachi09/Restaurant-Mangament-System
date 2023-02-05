@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+</head>
+<style>
+    #helper-form{
+  visibility: hidden;
+}
+img{
+    height: 100px;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+}
+</style>
+<body>
+    <form action="confirm.php" id="helper-form" method="post">
+        <input type="text" name="orderNoHelper" id="orderNoHelper">
+        <input type="text" name="namehelper" id="namehelper"">
+        <input type="text" name="addresshelper" id="addresshelper">
+        <input type="text" name="totalhelper" id="totalhelper">
+        <input type="text" name="allfoodshelper" id="allfoodshelper">
+        <input type="text" name="allamountshelper" id="allamountshelper">
+        <input type="submit">
+    </form>
+    <img src="../img/spinner.gif" alt="Loading...">
+    <script>
+        window.onload=function(){
+            document.getElementById('orderNoHelper').value = ""+(Math.floor(Math.random() * (9999999999 - 1000000000)) + 1000000000);
+            document.getElementById('namehelper').value = localStorage.getItem('name');
+            document.getElementById('addresshelper').value = localStorage.getItem('address');
+            document.getElementById('totalhelper').value = localStorage.getItem('fintotal');
+            document.getElementById('allfoodshelper').value = localStorage.getItem('allfoods');
+            document.getElementById('allamountshelper').value = localStorage.getItem('allamounts');
+        }
+        setTimeout(()=>{
+            document.getElementById("helper-form").submit();
+        }, 3000);
+        
+    </script>
+</body>
+</html>

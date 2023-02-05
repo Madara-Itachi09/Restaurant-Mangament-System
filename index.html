@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FoodArc</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
+</head>
+<body class="mainbody">
+
+<nav class="navbar navbar-inverse" id="navtop">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html" target="_self"><img class="imgicon" src="img/salad.png" alt="icon">Foodarc</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+      <li class="active"><a href="index.html" target="_self">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+          <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+          <li><a href="mailto: harshitkarn0@gmail.com" target="_blank">Email Us</a></li>
+        </ul>
+      </li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#" data-target="#login" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+      <li><a class="opencart" href="#" onclick="openNav()"><div><img src="img/shopping-cart.png" alt="icon"> Cart</div></a></li>
+    </ul>
+  </div>
+</nav>
+  
+
+
+<nav class="nvmen" id="nvmen">
+  <ul class="ulmen">
+    <li><a href="#rice">Rice Items</a></li>
+    <li><a href="#starter">Starters</a></li>
+    <li><a href="#maincr">Main Course</a></li>
+    <li><a href="#bread">Breads</a></li>
+    <li><a href="#dessert">Desserts</a></li>
+  </ul>
+</nav>
+
+<div class="header">
+  <p style="font-size: 100px; ">Food Arc</p>
+  <p style="font-size: 30px;">The only thing we love more than food is you!</p>
+</div>
+
+<h2 id="rice" class="foodhead">Rice Items</h2>
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/chfriedrice.jpg" alt="butter">
+      <div class="text"><span class="name">Chicken Fried Rice</span>
+      <span style="font-weight: bold;" class="price">&#8377 100</span></div>
+      <div id="divadd1" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Biryani.jpg" alt="butter">
+      <div class="text"><span class="name">Chicken biryani</span>
+      <span style="font-weight: bold;" class="price">&#8377 130</span></div>
+      <div id="divadd2" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/vegfried.JPG.jpg" alt="butter">
+      <div class="text"><span class="name">Veg Fried Rice</span>
+      <span style="font-weight: bold;" class="price">&#8377 60</span></div>
+      <div id="divadd3" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/veg-biryani.jpg" alt="butter">
+      <div class="text"><span class="name">Veg Biryani</span>
+      <span style="font-weight: bold;" class="price">&#8377 80</span></div>
+      <div id="divadd4" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Egg-Fried-Rice.jpg" alt="butter">
+      <div class="text"><span class="name">Egg fried Rice</span>
+      <span style="font-weight: bold;" class="price">&#8377 70</span></div>
+      <div id="divadd5" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/egg-biryani.jpg" alt="butter">
+      <div class="text"><span class="name">Egg Biryani</span>
+      <span style="font-weight: bold;" class="price">&#8377 100</span></div>
+      <div id="divadd6" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/jeera-rice.jpg" alt="butter">
+      <div class="text"><span class="name">Jeera Rice</span>
+      <span style="font-weight: bold;" class="price">&#8377 50</span></div>
+      <div id="divadd7" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/plainrice.jpg" alt="butter">
+      <div class="text"><span class="name">Plain rice</span>
+      <span style="font-weight: bold;" class="price">&#8377 40</span></div>
+      <div id="divadd8" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+</div>
+
+<h2 id="starter" class="foodhead">Starters</h2>
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/French-fries.jpg" alt="butter">
+      <div class="text"><span class="name">French Fries</span>
+      <span style="font-weight: bold;" class="price">&#8377 60</span></div>
+      <div id="divadd9" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/paneer_tikka.jpg" alt="butter">
+      <div class="text"><span class="name">Paneer Tikka</span>
+      <span style="font-weight: bold;" class="price">&#8377 90</span></div>
+      <div id="divadd10" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/idli.jpg" alt="butter">
+      <div class="text"><span class="name">Idli</span>
+      <span style="font-weight: bold;" class="price">&#8377 30</span></div>
+      <div id="divadd11" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Kalmi-Kebab.jpg" alt="butter">
+      <div class="text"><span class="name">Kalmi Kebab</span>
+      <span style="font-weight: bold;" class="price">&#8377 110</span></div>
+      <div id="divadd12" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/chicken65.jpg" alt="butter">
+      <div class="text"><span class="name">Chicken 65</span>
+      <span style="font-weight: bold;" class="price">&#8377 105</span></div>
+      <div id="divadd13" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Chilli-Chicken.jpg" alt="butter">
+      <div class="text"><span class="name">Chilli Chicken</span>
+      <span style="font-weight: bold;" class="price">&#8377 110</span></div>
+      <div id="divadd14" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/chpepper.jpg" alt="butter">
+      <div class="text"><span class="name">Chicken Pepper</span>
+      <span style="font-weight: bold;" class="price">&#8377 110</span></div>
+      <div id="divadd15" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Gobi-Manchurian-2-3.jpg" alt="butter">
+      <div class="text"><span class="name">Gobi Manchurian</span>
+      <span style="font-weight: bold;" class="price">&#8377 80</span></div>
+      <div id="divadd16" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+</div>
+
+<h2 id="maincr" class="foodhead">Main Course</h2>
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/chbhr.jpg" alt="butter">
+      <div class="text"><span class="name">Chola Bhatura</span>
+      <span style="font-weight: bold;" class="price">&#8377 80</span></div>
+      <div id="divadd17" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/paneer-butter-masala.jpg" alt="butter">
+      <div class="text"><span class="name">Paneer Butter Masala</span>
+      <span style="font-weight: bold;" class="price">&#8377 140</span></div>
+      <div id="divadd18" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Butter-Chicken.jpg" alt="butter">
+      <div class="text"><span class="name">Butter chicken</span>
+      <span style="font-weight: bold;" class="price">&#8377 170</span></div>
+      <div id="divadd19" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Palak-Paneer.jpg" alt="butter">
+      <div class="text"><span class="name">Palak Paneer</span>
+      <span style="font-weight: bold;" class="price">&#8377 130</span></div>
+      <div id="divadd20" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/matar-paneer.jpg" alt="butter">
+      <div class="text"><span class="name">Matar paneer</span>
+      <span style="font-weight: bold;" class="price">&#8377 120</span></div>
+      <div id="divadd21" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Kadai-Chicken.jpg" alt="butter">
+      <div class="text"><span class="name">Kadai Chicken</span>
+      <span style="font-weight: bold;" class="price">&#8377 160</span></div>
+      <div id="divadd22" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/gobi-masala.jpg" alt="butter">
+      <div class="text"><span class="name">Gobi Masala</span>
+      <span style="font-weight: bold;" class="price">&#8377 80</span></div>
+      <div id="divadd23" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Egg-Curry.jpg" alt="butter">
+      <div class="text"><span class="name">Egg Masala</span>
+      <span style="font-weight: bold;" class="price">&#8377 80</span></div>
+      <div id="divadd24" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+</div>
+
+<h2 id="bread" class="foodhead">Breads</h2>
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/plain-chapati.jpg" alt="butter">
+      <div class="text"><span class="name">Plain Chapati</span>
+      <span style="font-weight: bold;" class="price">&#8377 10</span></div>
+      <div id="divadd25" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Butter-chapati.jpg" alt="butter">
+      <div class="text"><span class="name">Butter Chapati</span>
+      <span style="font-weight: bold;" class="price">&#8377 13</span></div>
+      <div id="divadd26" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/naan-bread.jpg" alt="butter">
+      <div class="text"><span class="name">Naan</span>
+      <span style="font-weight: bold;" class="price">&#8377 20</span></div>
+      <div id="divadd27" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/butter-naan.jpg" alt="butter">
+      <div class="text"><span class="name">Butter Naan</span>
+      <span style="font-weight: bold;" class="price">&#8377 30</span></div>
+      <div id="divadd28" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/plain-paratha.jpg" alt="butter">
+      <div class="text"><span class="name">Plain Paratha</span>
+      <span style="font-weight: bold;" class="price">&#8377 20</span></div>
+      <div id="divadd29" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Kerala-Parotta.jpg" alt="butter">
+      <div class="text"><span class="name">Kerala Paratha</span>
+      <span style="font-weight: bold;" class="price">&#8377 25</span></div>
+      <div id="divadd30" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Aloo-Paratha.jpg" alt="butter">
+      <div class="text"><span class="name">Aloo Paratha</span>
+      <span style="font-weight: bold;" class="price">&#8377 40</span></div>
+      <div id="divadd31" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Gobi-Paratha.jpg" alt="butter">
+      <div class="text"><span class="name">Gobi Paratha</span>
+      <span style="font-weight: bold;" class="price">&#8377 40</span></div>
+      <div id="divadd32" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+</div>
+
+<h2 id="dessert" class="foodhead">Desserts</h2>
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/lassi.jpg" alt="butter">
+      <div class="text"><span class="name">Lassi</span>
+      <span style="font-weight: bold;" class="price">&#8377 40</span></div>
+      <div id="divadd33" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/rasgulla.jpg" alt="butter">
+      <div class="text"><span class="name">Rasgulla</span>
+      <span style="font-weight: bold;" class="price">&#8377 20</span></div>
+      <div id="divadd34" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Gulab-Jamun.jpg" alt="butter">
+      <div class="text"><span class="name">Gulab Jamun</span>
+      <span style="font-weight: bold;" class="price">&#8377 30</span></div>
+      <div id="divadd35" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/Falooda.jpg" alt="butter">
+      <div class="text"><span class="name">Falooda</span>
+      <span style="font-weight: bold;" class="price">&#8377 50</span></div>
+      <div id="divadd36" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/fruit-salad.jpg" alt="butter">
+      <div class="text"><span class="name">Fruit Salad</span>
+      <span style="font-weight: bold;" class="price">&#8377 30</span></div>
+      <div id="divadd37" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/apple-milkshake.jpg" alt="butter">
+      <div class="text"><span class="name">Apple Milkshake</span>
+      <span style="font-weight: bold;" class="price">&#8377 60</span></div>
+      <div id="divadd38" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/mango-juice.jpg" alt="butter">
+      <div class="text"><span class="name">Mango Juice</span>
+      <span style="font-weight: bold;" class="price">&#8377 40</span></div>
+      <div id="divadd39" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img style='height: 100%; width: 100%; object-fit: contain' src="img/pineapple-juice.jpg" alt="butter">
+      <div class="text"><span class="name">Pineapple Juice</span>
+      <span style="font-weight: bold;" class="price">&#8377 40</span></div>
+      <div id="divadd40" class="divadd"><button class="add" onclick="clicke(this)">Add</button></div>
+    </div> 
+  </div>
+
+</div>
+
+<a class="buttonLink"><button type="button" onclick="openNav()" class="btn btn-large verticalButton">Proceed to order</button></a>
+
+
+<div id="login" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-body">
+        <button data-dismiss="modal" class="close">&times;</button>
+        <h4 class="adminlogin">Admin Login</h4>
+        <form action="src/admin.php" method="GET">
+          <input type="text" name="username" class="username form-control" placeholder="Username"/>
+          <input type="password" name="password" class="password form-control" placeholder="password"/>
+          <button class="btn login">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>  
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h2>Your Cart</h2>
+  <p id="items"></p>
+  <div id="noitem"></div>
+  <div class="cart"><a class="place" href="#rice" onclick="closeNav()">Browse Food</a></div>
+</div>
+
+<footer id="about">
+  <div class="footer">
+  <div class="aboutf">
+    <h3>About</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, debitis quis! Inventore qui fugit maiores a amet accusamus, ea quas id neque porro, vitae tempore dolores fugiat! Expedita laboriosam natus nihil, eum sint libero itaque ullam veniam minus odio. Doloremque aliquam adipisci iste dignissimos natus atque veniam quam repellendus eveniet dolores. Facere, consectetur beatae id repudiandae incidunt laudantium recusandae ex ea alias eligendi enim natus, adipisci assumenda quasi eum? Aut consequuntur officiis vero enim, aliquam, dolorum animi corrupti quas error est nostrum minus voluptates! In, soluta nihil a veniam odio cum, et eligendi excepturi ab porro modi ipsam dignissimos ad?</p>
+  </div>
+  <div class="quicklink">
+    
+    <ul>
+      <li><h3>Quick Links</h3></li>
+      <li><a href="#top">Back to top</a></li>
+      <li><a href="#rice">Menu</a></li>
+      <li><a href="#about" onclick="openNav()">Open Cart</a></li>
+    </ul>
+  </div>
+  <div class="socialmed">
+    <a class="sociallink" href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt="insta"></a>
+    <a class="sociallink" href="https://twitter.com/" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
+    <a class="sociallink" href="mailto: harshitkarn0@gmail.com" target="_blank"><img class="lastimg" src="img/mail.png" alt="linkedin"></a>
+  </div>
+</div>
+<div class="copyright">
+  Copyright © 2021 All Rights Reserved by Foodarc.
+</div>
+</footer>
+
+</body>
+
+<script type="text/javascript">
+console.log(localStorage.length);
+  var count=0;
+	/* Simple appearence with animation AN-1*/
+
+  window.addEventListener("scroll", navHighlighter);
+  function navHighlighter(){
+    var a=document.getElementsByClassName('foodhead');
+    if(a[1].getBoundingClientRect().y>window.innerHeight/2&&document.getElementById('navtop').getBoundingClientRect().y>-150){
+      document.querySelector('[href="#rice"]').removeAttribute('id');
+    }
+    if(a[0].getBoundingClientRect().y<100&&a[1].getBoundingClientRect().y>window.innerHeight){
+      document.querySelector('[href="#rice"]').setAttribute("id", "abcd");
+      document.querySelector('[href="#starter"]').removeAttribute('id');
+    }
+    if(a[1].getBoundingClientRect().y<100&&a[2].getBoundingClientRect().y>window.innerHeight){
+      document.querySelector('[href="#starter"]').setAttribute("id", "abcd");
+      document.querySelector('[href="#rice"]').removeAttribute('id');
+      document.querySelector('[href="#maincr"]').removeAttribute('id');
+    }
+    if(a[2].getBoundingClientRect().y<100&&a[3].getBoundingClientRect().y>window.innerHeight){
+      document.querySelector('[href="#maincr"]').setAttribute("id", "abcd");
+      document.querySelector('[href="#starter"]').removeAttribute('id');
+      document.querySelector('[href="#bread"]').removeAttribute('id');
+    }
+    if(a[3].getBoundingClientRect().y<100&&a[4].getBoundingClientRect().y>window.innerHeight){
+      document.querySelector('[href="#bread"]').setAttribute("id", "abcd");
+      document.querySelector('[href="#maincr"]').removeAttribute('id');
+      document.querySelector('[href="#dessert"]').removeAttribute('id');
+    }
+    if(a[4].getBoundingClientRect().y<100){
+      document.querySelector('[href="#dessert"]').setAttribute("id", "abcd");
+      document.querySelector('[href="#bread"]').removeAttribute('id');
+    }
+  }
+
+
+
+  window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("nvmen");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
+window.onload=function(){
+  localStorage.clear();
+          }
+
+
+	</script>
+
+</html>

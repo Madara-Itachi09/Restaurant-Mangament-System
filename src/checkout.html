@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<script>
+    if(localStorage.length==0)
+              window.location.href = "../index.html";
+    
+</script>
+    <body class="checkpage">
+        <header>
+          <a href="../index.html"><img src="../img/salad.png" alt="icon">FoodArc</a>
+          <a href="#"><img src="../img/help-desk.png" alt=""></a>
+        </header>
+        <div class="outer">
+          <div class="form">
+            <h2>Enter Your details</h2>
+            <form action="">
+          <input type="text" id="name" name="name" onchange="inputchange(this.id)" placeholder="Your name.." required>
+          <p class="error" id="nameerr"></p>
+          <input type="text" id="phone" name="phone" onchange="inputchange(this.id)" placeholder="10-digit mobile no.." required>
+          <p class="error "id="phoneerr"></p>
+          <input type="text" id="email" name="email" onchange="inputchange(this.id)" placeholder="Your email.." required>
+          <p class="error" id="emailerr"></p>
+          <input type="text" id="house" name="house" onchange="inputchange(this.id)" placeholder="House No.." required>
+          <p class="error" id="houseerr"></p>
+          <input type="text" id="area" name="area" onchange="inputchange(this.id)" placeholder="Area.." required>
+          <p class="error" id="areaerr"></p>
+          <select id="city" name="city">
+            <option value="Bangalore">Bangalore</option>
+          </select>
+          
+          
+      
+          
+            </form>
+            <h2 class="support">Need Help?</h2>
+            <h3 class="support">Reach us at</h3>
+            <h2 class="support">+91-9521246172</h2>
+          </div>
+          <div class="carto">
+            <h2>Your Cart</h2>
+            
+            <div class="cartino" id="itemtotal"><span>Item Price</span><span>&#8377 200</span></div>
+            <div class="cartino" id="d"><span>Delivery charge</span><span>&#8377 20</span></div>
+            <div class="cartino" id="a"><span>GST (5%)</span><span>&#8377 </span></div>
+            <div class="cartino" id="c"><span>CGST (2.5%)</span><span>&#8377 </span></div>
+            <div class="cartino" id="b"><span>SGST (2.5%)</span><span>&#8377 </span></div>
+            <div class="cartino" id="total"><span>Payable</span><span>&#8377 </span></div>
+            <h3>Payment mode</h3>
+          <label class="container1">Cash on delivery
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <button class="btno" onclick="checkini()">Place order</button>
+          </div>
+        </div>
+        
+        <div class="copyright">
+          Copyright © 2021 All Rights Reserved by Foodarc.
+        </div>
+        <script>
+         var s=document.getElementById('itemtotal');
+          var j=localStorage.getItem('total').trim();
+          if(j[0]=='r'){
+            j=j.substring(2,j.length);
+            localStorage.setItem('total',j);
+          }
+          if(!isNaN(j[0])){
+            j="&#8377 "+j;
+            localStorage.setItem('total',j);
+          }
+          s.lastChild.innerHTML=j;
+          console.log(j.substring(1,j.length))
+          var t=document.getElementsByClassName('carto')[0];
+          for(const key in localStorage){
+            if(!isNaN(key[key.length-1])){
+              var a=document.createElement('div');
+              a.setAttribute('class','cartino');
+              a.innerHTML='<span>'+key+'</span><span>'+localStorage.getItem(key)+'</span>';
+              t.insertBefore(a,s);
+            }
+          
+          }
+          var q=parseInt(j.substring(1,j.length))+20;
+          var r=q*0.05;
+          document.getElementById('a').lastChild.innerHTML+=r;
+          document.getElementById('c').lastChild.innerHTML+=r/2;
+          document.getElementById('b').lastChild.innerHTML+=r/2;
+          document.getElementById('total').lastChild.innerHTML+=q+r;
+
+
+          function checkini(){
+            var inp=document.getElementsByTagName('input');
+            var p=document.getElementsByClassName('error');
+            var city=document.getElementById('city');
+            if(/^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/.test(inp[0].value)){
+              if(/^[6-9]\d{9}$/.test(phone.value)){
+                if(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.value)){
+                  if(/^[a-zA-Z0-9]/.test(inp[3].value)){
+                    if(/^[a-zA-Z0-9]/.test(inp[4].value)){
+                      localStorage.setItem('gst',r);
+                      localStorage.setItem('fintotal',q+r);
+                      localStorage.setItem('name',inp[0].value.trim());
+                      localStorage.setItem('address',inp[3].value.trim()+', '+inp[4].value.trim()+', Bangalore');
+                      window.location.href = "./helper.html";
+                    }
+                    else{
+                      inp[4].style.marginBottom="0px";
+                      inp[4].style.border="1px solid red";
+                      p[4].innerHTML="*Please enter valid area name";
+                    }
+                  }
+                  else{
+                    inp[3].style.marginBottom="0px";
+                    inp[3].style.border="1px solid red";
+                     p[3].innerHTML="*Please enter valid house no";
+                  }
+                }
+                else{
+                  inp[2].style.marginBottom="0px";
+                  inp[2].style.border="1px solid red";
+                  p[2].innerHTML="*Please enter valid email";
+                }
+              }
+              else{
+                inp[1].style.marginBottom="0px";
+                inp[1].style.border="1px solid red";
+                p[1].innerHTML="*Please enter valid phone no";
+              }
+            }
+            else{
+              inp[0].style.marginBottom="0px";
+              inp[0].style.border="1px solid red";
+               p[0].innerHTML="*Please enter valid name";
+            }   
+          }
+
+          function inputchange(clicked_id){
+           var id=document.getElementById(clicked_id);
+           if(id.style.marginBottom=="0px"){
+             var cond=false;
+             switch(clicked_id){
+               case "name":if(/^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/.test(id.value)){
+                             cond=true;
+                           }
+                           break;
+               case "phone":if(/^[6-9]\d{9}$/.test(id.value)){
+                             cond=true;
+                           }
+                           break;
+               case "email":if(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(id.value)){
+                             cond=true;
+                           }
+                           break;
+               case "house":
+               case "area":if(/^[a-zA-Z0-9]/.test(id.value)){
+                             cond=true;
+                           }
+                           break;
+              }
+           }
+           if(cond==true){
+             id.style.margin= '8px 0';
+             id.style.border="1px solid #ccc";
+             document.getElementById(clicked_id+'err').innerHTML="";
+           }
+          }
+        </script>
+      </body>
+</html>
